@@ -7,7 +7,6 @@ import { PostserviceService } from 'src/app/services/postservice.service';
   styleUrls: ['./post.component.css']
 })
 export class PostComponent implements OnInit {
-
   data = [] as any;
   public form = {
     description: null,
@@ -18,12 +17,20 @@ export class PostComponent implements OnInit {
   constructor(private postService:PostserviceService) { }
 
   ngOnInit(): void {
+    this.getData();
   }
 
-  getData(){
-    this.postService.getPostData().subscribe((ret=>{
-    this.data = ret; })
-    }
+  deleteData(id:number){
+    return this.postService.deletePost(id).subscribe(
+   )} 
+}
+
+   getData(){
+    this.postService.getPostData().subscribe((res:any)=>{
+    this.data = res; 
+})
+}
+
 
 
 }

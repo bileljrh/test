@@ -4,6 +4,9 @@
         <th scope="col">#</th>
         <th scope="col">Description</th>
         <th scope="col">Title</th>
+        <th scope="col">Action</th>
+
+
       </tr>
     </thead>
     <tbody>
@@ -11,6 +14,11 @@
         <th scope="row">1</th>
         <td>{{post.description}}</td>
         <td>{{post.title}}</td>
+        <td>
+            <td><button (click)="deleteData(post.id)" class="btn btn-danger">Delete</button>
+                <button (click)="updatePost(post.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+            </td>
+        </td>
       </tr>
      
     </tbody>

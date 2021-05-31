@@ -11,27 +11,27 @@ export class PostserviceService {
   constructor(private http: HttpClient) { }
 
 
-  storePost(data:any) {
+  storePost(data:Object) {
     return this.http.post(`${this.baseUrl}/posts`,data)
   }
   getPostData() {
     return this.http.get(`${this.baseUrl}/posts`)
   }
-  
-  getPostById(id:any) {
+
+  getPostById(id:number) {
     return this.http.get(`${this.baseUrl}/posts`+id)
   }
 
-  getPostByUser(id:any) {
+  getPostByUser(id:number) {
     return this.http.get(`${this.baseUrl}/posts`+id)
   }
-  deletePost(id:any){ 
+  deletePost(id:number){ 
     return this.http.delete(`${this.baseUrl}/posts/`+id)
   }
-  updatePost(id:any,data:any) {
+  updatePost(id:number,data:Object) {
     return this.http.post(`${this.baseUrl}/posts/`+id,data)
   }
-  getUserById(id:any){
+  getUserById(id:number){
     return this.http.get(`${this.baseUrl}/user`+id)
   }
 

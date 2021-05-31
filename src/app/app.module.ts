@@ -6,6 +6,7 @@ import { PostComponent } from './components/post/post.component';
 import { HttpClientModule } from '@angular/common/http';
 import { PostserviceService } from './services/postservice.service';
 import { EditpostComponent } from './components/post/editpost/editpost.component';
+import { AppRoutingModule } from './app-routing.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { EditpostComponent } from './components/post/editpost/editpost.component
     ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [PostserviceService],
   bootstrap: [AppComponent]
